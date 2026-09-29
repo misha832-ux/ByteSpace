@@ -1,21 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import CourseCard, { type Course } from "./CourseCard";
+import CourseCard from "./CourseCard";
+import { COURSES } from "@/lib/courses";
 
 const CATEGORIES = [
   "Featured", "Music", "Drawing & Painting", "Marketing", "Animation", "Social Media", "UI/UX Design", "Creative Marketing",
   "Digital Illustration", "Film & Video", "Crafts", "Freelance & Entrepreneurship", "Graphic Design", "Photography",
   "Productivity", "Web Development", "Data Science", "Cooking",
-];
-
-const COURSES: Course[] = [
-  { title: "Learn Figma from Basic", image: "/courses/1.jpg" },
-  { title: "Build Digital Asset", image: "/courses/2.jpg" },
-  { title: "the Power of Big Data", image: "/courses/3.jpg" },
-  { title: "Balancing Productivity and Life", image: "/courses/4.jpg" },
-  { title: "Mastering Money Management", image: "/courses/5.jpg" },
-  { title: "From Idea to Startup Success", image: "/courses/6.jpg" },
 ];
 
 export default function Courses() {
@@ -33,7 +25,7 @@ export default function Courses() {
         <button className="px-2 py-2 text-xs text-brand">+ More</button>
       </div>
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {COURSES.map((c) => (<CourseCard key={c.title} course={c} />))}
+        {COURSES.map((c) => (<CourseCard key={c.slug} course={c} />))}
       </div>
     </section>
   );
