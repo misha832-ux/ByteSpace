@@ -8,8 +8,8 @@ export default function Navbar() {
         <Logo />
         <nav className="hidden items-center gap-6 md:flex">
           <Link href="/" className="font-medium">Home</Link>
-          <Link href="#courses" className="text-white/80 hover:text-white">Courses</Link>
-          <Link href="#creators" className="text-white/80 hover:text-white">Creators</Link>
+          <Link href="/courses" className="text-white/80 hover:text-white">Courses</Link>
+          <Link href="/creators/purepearl-studio" className="text-white/80 hover:text-white">Creators</Link>
         </nav>
         <div className="flex items-center gap-5">
           <Link href="/login" className="text-white/80 hover:text-white">Sign In</Link>

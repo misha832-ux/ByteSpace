@@ -1,14 +1,18 @@
-const COLORS = ["#0e0e1a", "#f28ab2", "#f5b83d", "#5a6fd6", "#2a2a35", "#b45f4a"];
+import Image from "next/image";
+
+const FACES = ["/avatars/stack1.jpg", "/avatars/albert.jpg", "/avatars/cody.jpg", "/avatars/brooklyn.jpg"];
 
 export default function AvatarStack({ count = "26+", size = 26, dark = false }: { count?: string; size?: number; dark?: boolean }) {
   return (
     <div className="flex items-center">
-      {COLORS.slice(0, 5).map((c, i) => (
+      {FACES.map((src, i) => (
         <span
-          key={i}
-          className="-ml-1.5 first:ml-0 rounded-full border-2 border-white"
-          style={{ width: size, height: size, background: c }}
-        />
+          key={src}
+          className="relative -ml-1.5 first:ml-0 overflow-hidden rounded-full border-2 border-white"
+          style={{ width: size, height: size }}
+        >
+          <Image src={src} alt="" fill className="object-cover" />
+        </span>
       ))}
       <span
         className={`-ml-1.5 flex items-center justify-center rounded-full text-[10px] font-medium ${dark ? "bg-ink text-white" : "bg-lime text-ink"}`}

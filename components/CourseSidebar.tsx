@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Course } from "@/lib/courses";
 
@@ -40,7 +41,9 @@ export default function CourseSidebar({ course }: { course: Course }) {
       </ul>
 
       <div className="mt-6 flex items-center gap-3 border-t border-black/10 pt-5">
-        <span className="h-10 w-10 rounded-full bg-[#3a4a8a]" />
+        <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
+          <Image src="/avatars/purepearl.jpg" alt="" fill className="object-cover" />
+        </span>
         <div><p className="text-sm font-medium">PurePearl Studio</p><p className="text-xs text-muted">Professional Creator</p></div>
       </div>
       <p className="mt-4 text-sm leading-6 text-muted">Ready to Dive In? Enroll Now and Start Building Your Digital Future!</p>

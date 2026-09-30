@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Logo from "./Logo";
-import AvatarStack from "./AvatarStack";
 import { Ring, Cone, Squiggle } from "./Shapes";
 
 export default function AuthShell({ heading, blurb, children }: { heading: string; blurb: string; children: React.ReactNode }) {
@@ -17,6 +16,13 @@ export default function AuthShell({ heading, blurb, children }: { heading: strin
               <div className="relative h-36 overflow-hidden rounded-2xl"><Image src="/courses/3.jpg" alt="" fill className="object-cover" /></div>
               <div className="mt-3 flex justify-between"><p className="font-semibold">the Power of Big Data</p><span className="text-sm text-muted">4.5 <span className="text-lime">★</span></span></div>
               <p className="text-[11px] text-muted">by <span className="text-brand">purepearl studio</span></p>
+              <div className="mt-3 flex items-center gap-3">
+                <span className="flex items-center gap-1.5 rounded-full bg-chip px-3 py-1.5 text-[11px] text-ink">
+                  <svg viewBox="0 0 16 16" className="h-3 w-3" fill="currentColor"><rect x="1" y="9" width="3" height="6" /><rect x="6" y="5" width="3" height="10" /><rect x="11" y="1" width="3" height="14" /></svg>
+                  Beginner
+                </span>
+                <img src="/avatars/stack-26.png" alt="" className="h-6 w-auto" />
+              </div>
               <p className="mt-3 font-semibold text-brand">$25<span className="text-[10px] font-normal text-muted">/lifetime</span></p>
             </div>
             <Ring color="lime" className="left-24 top-12 h-20 w-20 !border-[14px]" />
@@ -24,7 +30,7 @@ export default function AuthShell({ heading, blurb, children }: { heading: strin
             <Squiggle color="white" className="left-64 bottom-14 h-20 w-20" />
             <div className="absolute bottom-0 left-44 rounded-xl bg-lime px-4 py-3 text-ink">
               <p className="text-sm font-medium">Happy Students</p><p className="mb-2 text-[11px]">4.5 (240) ★</p>
-              <AvatarStack count="2K+" size={28} dark />
+              <img src="/avatars/stack-2k.png" alt="" className="h-7 w-auto" />
             </div>
           </div>
         </div>
