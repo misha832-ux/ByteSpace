@@ -22,13 +22,13 @@ const RATING_BARS = [
 ];
 
 const REVIEWS = [
-  { name: "PurePearl Studio", role: "UI/UX Designer", when: "a year ago", text: "The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!" },
-  { name: "Albert Flores", role: "UI/UX Designer", when: "a year ago", text: "This course transformed my approach to digital design. The combination of theory, hands-on exercises, and real-world applications made it a truly enriching experience. Excited to implement what I've learned!" },
-  { name: "Cody Fisher", role: "UI/UX Designer", when: "a year ago", text: "The project showcase and critique module created a collaborative environment where I could showcase my work, receive valuable feedback, and refine my skills. It added a unique and valuable dimension to the learning process." },
-  { name: "Brooklyn Simmons", role: "UI/UX Designer", when: "a year ago", text: "The lessons on optimizing digital assets for various platforms were particularly insightful. The course adapts to the evolving digital landscape, and the engaging content kept me motivated throughout." },
+  { name: "PurePearl Studio", role: "UI/UX Designer", when: "a year ago", avatar: "/avatars/purepearl.jpg", text: "The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!" },
+  { name: "Albert Flores", role: "UI/UX Designer", when: "a year ago", avatar: "/avatars/albert.jpg", text: "This course transformed my approach to digital design. The combination of theory, hands-on exercises, and real-world applications made it a truly enriching experience. Excited to implement what I've learned!" },
+  { name: "Cody Fisher", role: "UI/UX Designer", when: "a year ago", avatar: "/avatars/cody.jpg", text: "The project showcase and critique module created a collaborative environment where I could showcase my work, receive valuable feedback, and refine my skills. It added a unique and valuable dimension to the learning process." },
+  { name: "Brooklyn Simmons", role: "UI/UX Designer", when: "a year ago", avatar: "/avatars/brooklyn.jpg", text: "The lessons on optimizing digital assets for various platforms were particularly insightful. The course adapts to the evolving digital landscape, and the engaging content kept me motivated throughout." },
 ];
 
-const SNEAK_PEEK = ["/courses/1.jpg", "/courses/4.jpg", "/courses/5.jpg", "/courses/6.jpg"];
+const SNEAK_PEEK = ["/sneak/1.jpg", "/sneak/2.jpg", "/sneak/3.jpg", "/sneak/4.jpg"];
 const KEY_POINTS = ["Foundational Concepts", "Design Principles Mastery", "Advanced Techniques in Digital Creation", "Project Management Best Practices"];
 
 const TABS = ["About", "Lesson", "Reviews"] as const;
@@ -141,7 +141,9 @@ export default function CourseDetailTabs({ course }: { course: Course }) {
               <article key={r.name + r.text.slice(0, 8)} className="rounded-2xl border border-black/10 p-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <span className="h-10 w-10 rounded-full bg-[#c9ccd4]" />
+                    <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
+                      <Image src={r.avatar} alt="" fill className="object-cover" />
+                    </span>
                     <div><p className="font-medium text-ink">{r.name}</p><p className="text-xs text-muted">{r.role}</p></div>
                   </div>
                   <span className="text-xs text-muted">{r.when}</span>

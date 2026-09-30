@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -29,7 +30,9 @@ export default async function CreatorPage({ params }: { params: Promise<{ slug: 
         <Squiggle color="white" className="right-[6%] top-16 hidden h-16 w-16 md:block" />
         <div className="relative mx-auto flex max-w-6xl items-start justify-between gap-6 px-6">
           <div className="flex items-start gap-5">
-            <span className="h-20 w-20 shrink-0 rounded-2xl bg-[#f3a3b8]" aria-hidden />
+            <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl" aria-hidden>
+              <Image src={creator.avatar} alt="" fill className="object-cover" />
+            </span>
             <div>
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-semibold md:text-3xl">{creator.name}</h1>

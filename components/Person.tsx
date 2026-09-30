@@ -2,10 +2,6 @@ import fs from "node:fs";
 import path from "node:path";
 import Image from "next/image";
 
-/**
- * Renders /public/images/<name>.png if you've exported it from Figma
- * (transparent PNG cutout); otherwise shows a neutral silhouette placeholder.
- */
 export default function Person({ name, className = "", width = 420, height = 460 }: { name: string; className?: string; width?: number; height?: number }) {
   const file = `/images/${name}.png`;
   const exists = fs.existsSync(path.join(process.cwd(), "public", file));
