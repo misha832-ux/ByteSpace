@@ -29,12 +29,12 @@ export default async function CreatorPage({ params }: { params: Promise<{ slug: 
         <Navbar />
         <Squiggle color="white" className="right-[6%] top-16 hidden h-16 w-16 md:block" />
         <div className="relative mx-auto flex max-w-6xl items-start justify-between gap-6 px-6">
-          <div className="flex items-start gap-5">
+          <div className="flex min-w-0 flex-col items-start gap-5 sm:flex-row">
             <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl" aria-hidden>
               <Image src={creator.avatar} alt="" fill sizes="80px" className="object-cover" />
             </span>
             <div>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <h1 className="text-2xl font-semibold md:text-3xl">{creator.name}</h1>
                 <span className="rounded-full bg-lime px-3 py-1 text-xs font-medium text-ink">Creator</span>
               </div>
@@ -42,7 +42,7 @@ export default async function CreatorPage({ params }: { params: Promise<{ slug: 
               <div className="mt-4 max-w-2xl space-y-2 text-sm leading-6 text-white/85">
                 {creator.bio.map((p) => (<p key={p.slice(0, 12)}>{p}</p>))}
               </div>
-              <div className="mt-5 flex gap-3">
+              <div className="mt-5 flex flex-wrap gap-3">
                 <span className="rounded-full bg-white px-4 py-2 text-sm font-medium text-ink">{creator.products} Products</span>
                 <span className="rounded-full bg-white px-4 py-2 text-sm font-medium text-ink">{creator.followers} Followers</span>
               </div>
