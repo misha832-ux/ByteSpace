@@ -1,6 +1,5 @@
 type P = { className?: string };
 
-/* Simple CSS/SVG stand-ins for the 3D shapes in the design. */
 export function Squiggle({ className = "", color = "lime" }: P & { color?: "lime" | "white" }) {
   const c = color === "lime" ? "#d4ff00" : "#ffffff";
   return (
