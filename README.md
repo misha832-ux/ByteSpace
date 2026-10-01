@@ -67,7 +67,7 @@ public/                 Images, avatars and course thumbnails
 ```bash
 # 1. Clone the repository
 git clone <your-repo-url>
-cd ByteSpace-main
+cd ByteSpace
 
 # 2. Install dependencies
 pnpm install
