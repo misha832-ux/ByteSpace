@@ -8,10 +8,10 @@ export default function CourseCard({ course }: { course: Course }) {
     <article className="rounded-3xl border border-black/10 bg-white p-3">
       <Link href={`/courses/${course.slug}`} className="relative block h-40 overflow-hidden rounded-2xl">
         <Image src={course.image} alt="" fill sizes="(min-width:768px) 33vw, 100vw" className="object-cover" />
-        <div className="absolute inset-x-0 bottom-3 flex justify-center gap-2 text-[11px] text-ink/80">
-          <span className="rounded-full bg-white/70 px-3 py-1 backdrop-blur">{course.lessons} Lessons</span>
-          <span className="rounded-full bg-white/70 px-3 py-1 backdrop-blur">{course.hours} hours 16 mins</span>
-          <span className="rounded-full bg-white/70 px-3 py-1 backdrop-blur">{course.comments} Comments</span>
+        <div className="absolute inset-x-0 bottom-3 flex justify-center gap-1.5 px-2 text-[10px] text-ink/80 sm:gap-2 sm:text-[11px]">
+          <span className="whitespace-nowrap rounded-full bg-white/70 px-2.5 py-1 backdrop-blur sm:px-3">{course.lessons} Lessons</span>
+          <span className="whitespace-nowrap rounded-full bg-white/70 px-2.5 py-1 backdrop-blur sm:px-3">{course.hours} hours 16 mins</span>
+          <span className="hidden whitespace-nowrap rounded-full bg-white/70 px-2.5 py-1 backdrop-blur min-[400px]:inline sm:px-3">{course.comments} Comments</span>
         </div>
       </Link>
       <div className="px-1 pt-3">

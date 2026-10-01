@@ -31,7 +31,8 @@ function CourseCard({ className, image, title, chips, rating = false }: { classN
 export default function AuthShell({ heading, blurb, children }: { heading: string; blurb: string; children: React.ReactNode }) {
   return (
     <main className="bg-grid min-h-screen px-6 py-8 text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2 lg:gap-10">
+        <div className="lg:hidden"><Logo /></div>
         <div className="relative hidden lg:block">
           <Logo markOnly />
           <h2 className="mt-14 text-lg font-semibold">{heading}</h2>
@@ -77,7 +78,7 @@ export default function AuthShell({ heading, blurb, children }: { heading: strin
             </div>
           </div>
         </div>
-        <div className="flex items-center"><div className="w-full rounded-3xl bg-white p-8 text-ink md:p-10">{children}</div></div>
+        <div className="flex items-center"><div className="w-full rounded-3xl bg-white p-6 text-ink sm:p-8 md:p-10">{children}</div></div>
       </div>
     </main>
   );
