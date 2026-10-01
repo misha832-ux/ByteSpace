@@ -61,7 +61,7 @@ export default function CourseDetailTabs({ course }: { course: Course }) {
           <h3 className="mt-10 text-lg font-semibold text-ink">Sneak Peak</h3>
           <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {SNEAK_PEEK.map((src) => (
-              <div key={src} className="relative h-28 overflow-hidden rounded-xl"><Image src={src} alt="" fill className="object-cover" /></div>
+              <div key={src} className="relative h-28 overflow-hidden rounded-xl"><Image src={src} alt="" fill sizes="25vw" className="object-cover" /></div>
             ))}
           </div>
 
@@ -142,7 +142,7 @@ export default function CourseDetailTabs({ course }: { course: Course }) {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
-                      <Image src={r.avatar} alt="" fill className="object-cover" />
+                      <Image src={r.avatar} alt="" fill sizes="40px" className="object-cover" />
                     </span>
                     <div><p className="font-medium text-ink">{r.name}</p><p className="text-xs text-muted">{r.role}</p></div>
                   </div>

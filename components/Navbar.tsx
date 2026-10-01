@@ -6,7 +6,7 @@ export default function Navbar() {
     <header className="absolute inset-x-0 top-0 z-20">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 text-sm text-white">
         <Logo />
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-6 min-[640px]:flex md:flex">
           <Link href="/" className="font-medium">Home</Link>
           <Link href="/courses" className="text-white/80 hover:text-white">Courses</Link>
           <Link href="/creators/purepearl-studio" className="text-white/80 hover:text-white">Creators</Link>

@@ -31,7 +31,7 @@ export default async function CreatorPage({ params }: { params: Promise<{ slug: 
         <div className="relative mx-auto flex max-w-6xl items-start justify-between gap-6 px-6">
           <div className="flex items-start gap-5">
             <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl" aria-hidden>
-              <Image src={creator.avatar} alt="" fill className="object-cover" />
+              <Image src={creator.avatar} alt="" fill sizes="80px" className="object-cover" />
             </span>
             <div>
               <div className="flex items-center gap-3">

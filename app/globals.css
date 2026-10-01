@@ -13,8 +13,8 @@
   --color-ink: #0e0e1a;
   --color-muted: #6b6f7b;
   --color-chip: #f1f1f3;
-  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
 body {

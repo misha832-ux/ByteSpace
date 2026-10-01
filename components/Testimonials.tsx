@@ -18,7 +18,7 @@ export default function Testimonials() {
           {ITEMS.map((t) => (
             <figure key={t.name} className="rounded-3xl bg-white p-6 shadow-sm">
               <span className="relative block h-11 w-11 overflow-hidden rounded-full">
-                <Image src={t.avatar} alt="" fill className="object-cover" />
+                <Image src={t.avatar} alt="" fill sizes="44px" className="object-cover" />
               </span>
               <figcaption className="mt-3"><p className="font-semibold text-ink">{t.name}</p><p className="text-sm text-brand">{t.role}</p></figcaption>
               <blockquote className="mt-4 text-sm leading-6 text-muted">&ldquo;{t.text}&rdquo;</blockquote>
