@@ -11,9 +11,9 @@ const INCLUDES = [
 
 export default function CourseSidebar({ course }: { course: Course }) {
   return (
-    <aside className="rounded-3xl bg-white p-6 text-ink shadow-xl">
-      <h2 className="text-lg font-semibold">{course.lessons} Lessons ({course.hours} hours)</h2>
-      <ol className="mt-4 space-y-3 text-sm">
+    <aside className="rounded-2xl bg-white p-3 text-ink shadow-xl lg:rounded-3xl lg:p-6">
+      <h2 className="text-[11px] font-semibold lg:text-lg">{course.lessons} Lessons ({course.hours} hours)</h2>
+      <ol className="mt-3 space-y-2 text-[8px] lg:mt-4 lg:space-y-3 lg:text-sm">
         {[
           ["Introduction to Digital Assets", "12 mins"],
           ["Design Principles for Impacts", "21 mins"],
@@ -21,33 +21,33 @@ export default function CourseSidebar({ course }: { course: Course }) {
         ].map(([label, time], i) => (
           <li key={label} className="flex items-start justify-between gap-3">
             <span><span className="text-muted">0{i + 1}</span> <span className="ml-1">{label}</span></span>
-            <span className="shrink-0 text-brand">{time}</span>
+            <span className="shrink-0 text-[8px] text-brand lg:text-sm">{time}</span>
           </li>
         ))}
       </ol>
-      <p className="mt-3 text-sm text-muted">{course.lessons - 3} more videos</p>
-      <p className="mt-5 text-sm leading-6 text-muted">Ready to Dive In? Enroll Now and Start Building Your Digital Future!</p>
-      <p className="mt-5 text-3xl font-semibold text-brand">${course.price}<span className="text-xs font-normal text-muted">/lifetime</span></p>
-      <button className="mt-4 h-11 w-full rounded-full bg-lime text-sm font-medium text-ink hover:brightness-95">Enroll Now</button>
+      <p className="mt-2 text-[8px] text-muted lg:mt-3 lg:text-sm">{course.lessons - 3} more videos</p>
+      <p className="mt-3 text-[8px] leading-4 text-muted lg:mt-5 lg:text-sm lg:leading-6">Ready to Dive In? Enroll Now and Start Building Your Digital Future!</p>
+      <p className="mt-3 text-xl font-semibold lg:mt-5 lg:text-3xl text-brand">${course.price}<span className="text-xs font-normal text-muted">/lifetime</span></p>
+      <button className="mt-2 h-8 w-full lg:mt-4 lg:h-11 rounded-full bg-lime text-[9px] font-medium lg:text-sm text-ink hover:brightness-95">Enroll Now</button>
 
-      <h3 className="mt-8 font-semibold">This course include</h3>
-      <ul className="mt-4 space-y-3 text-sm">
+      <h3 className="mt-5 text-[10px] font-semibold lg:mt-8 lg:text-base">This course include</h3>
+      <ul className="mt-3 space-y-2 text-[8px] lg:mt-4 lg:space-y-3 lg:text-sm">
         {INCLUDES.map((i) => (
           <li key={i.label} className="flex items-center gap-2.5">
-            <svg viewBox="0 0 24 24" className="h-4 w-4 text-brand" fill="none" stroke="currentColor" strokeWidth="1.8">{i.icon}</svg>
+            <svg viewBox="0 0 24 24" className="h-3 w-3 text-brand lg:h-4 lg:w-4" fill="none" stroke="currentColor" strokeWidth="1.8">{i.icon}</svg>
             {i.label}
           </li>
         ))}
       </ul>
 
-      <div className="mt-6 flex items-center gap-3 border-t border-black/10 pt-5">
-        <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
-          <Image src="/avatars/purepearl.jpg" alt="" fill className="object-cover" />
+      <div className="mt-4 flex items-center gap-2 lg:mt-6 lg:gap-3 border-t border-black/10 pt-5">
+        <span className="relative h-7 w-7 lg:h-10 lg:w-10 shrink-0 overflow-hidden rounded-full">
+          <Image src="/avatars/purepearl.jpg" alt="" fill sizes="40px" className="object-cover" />
         </span>
-        <div><p className="text-sm font-medium">PurePearl Studio</p><p className="text-xs text-muted">Professional Creator</p></div>
+        <div><p className="text-[9px] font-medium lg:text-sm">PurePearl Studio</p><p className="text-[7px] text-muted lg:text-xs">Professional Creator</p></div>
       </div>
-      <p className="mt-4 text-sm leading-6 text-muted">Ready to Dive In? Enroll Now and Start Building Your Digital Future!</p>
-      <Link href="/creators/purepearl-studio" className="mt-4 inline-block rounded-full border border-black/15 px-5 py-2 text-sm text-ink hover:bg-chip">See Full Profile</Link>
+      <p className="mt-3 text-[8px] leading-4 text-muted lg:mt-4 lg:text-sm lg:leading-6">Ready to Dive In? Enroll Now and Start Building Your Digital Future!</p>
+      <Link href="/creators/purepearl-studio" className="mt-3 inline-block rounded-full border border-black/15 px-3 py-1.5 text-[8px] lg:px-5 lg:py-2 lg:text-sm text-ink hover:bg-chip">See Full Profile</Link>
     </aside>
   );
 }

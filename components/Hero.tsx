@@ -28,9 +28,9 @@ export default function Hero() {
         </form>
       </div>
 
-      <div className="relative mx-auto mt-6 h-[300px] max-w-3xl md:h-[380px]">
+      <div className="relative mx-auto mt-6 h-[320px] max-w-3xl md:h-[430px]">
         <div className="absolute inset-x-0 bottom-0 mx-auto h-[300px] w-[300px] rounded-t-full bg-lime md:h-[400px] md:w-[560px]" />
-        <Person name="hero-person" className="absolute bottom-0 left-1/2 h-[280px] w-auto -translate-x-1/2 md:h-[370px]" />
+        <Person name="hero-person" className="absolute bottom-0 left-1/2 h-[300px] w-auto -translate-x-1/2 md:h-[420px]" />
         <div className="absolute left-0 top-10 hidden rounded-xl bg-white px-4 py-3 text-ink shadow-md md:block">
           <p className="text-sm font-medium">UI/UX Design</p>
           <p className="text-[11px] text-muted">200 Courses • 1000+ Students</p>
